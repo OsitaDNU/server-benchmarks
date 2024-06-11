@@ -11,6 +11,7 @@ Use the instructions below to run and benchmark each server.
 - Install Go (ideally Go 1.20 or later)
 - Install PHP (ideally PHP 8.2 or later)
 - Install Node.js (ideally Node.js 20 or later)
+- Install [OpenSwoole](https://openswoole.com/docs/get-started/installation) (Needed to run the Swoole server)
 - Install `wrk` for benchmarking
 
 ### Installing `wrk`
@@ -47,6 +48,13 @@ The server will start on `http://localhost:8080`.
 Navigate to the `node` directory and run the following command:
 ```sh
 node server.js
+```
+The server will start on `http://localhost:8080`.
+
+### OpenSwoole Server
+Navigate to the `swoole` directory and run the following command:
+```sh
+php -d extension=swoole.so index.php
 ```
 The server will start on `http://localhost:8080`.
 
@@ -87,7 +95,7 @@ Transfer/sec:      5.06MB
 
 ## Contributing
 
-Feel free to fork the project and submit pull requests with any enhancements or bug fixes.
+Feel free to fork the project, make optimizations, and submit pull requests with any enhancements or bug fixes.
 
 ## License
 

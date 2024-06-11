@@ -15,12 +15,10 @@ wrk -t12 -c400 -d30s http://localhost:8080
 
 ## Results
 Per thread results:
-| Server | Requests/sec | Latency (ms) | 
-|--------|--------------|--------------|
-| Go     | 24,380     | 2.15ms       |
-| PHP    | 555     | 59.61ms        | 
-| Node.js| 2830     | 24.29ms        |
+| Server            | Requests/sec | Latency (ms) |
+|-------------------|--------------|--------------|
+| Go                | 24,380       | 2.15ms       |
+| PHP               | 555          | 59.61ms      |
+| Node.js           | 2,830        | 24.29ms      |
+| PHP (OpenSwoole)  | 7,250        | 4.58ms       |
 
-## Conclusion
-
-Based on the benchmark results, it appears that Go is the fastest server technology in terms of both requests per second and throughput. However, the latency of PHP and Node.js is also relatively low, making them suitable for certain use cases where low latency is important. Ultimately, the choice of server technology depends on the specific requirements of the application and the trade-offs between performance and other factors such as latency and ease of use.
